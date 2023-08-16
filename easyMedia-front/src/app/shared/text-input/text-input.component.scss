@@ -1,0 +1,12 @@
+label {
+  color: #0e2248;
+}
+.post-inputs {
+  border-radius: 16px;
+  background-color: #ebebeb;
+  border: 1px solid #5f5e5e;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

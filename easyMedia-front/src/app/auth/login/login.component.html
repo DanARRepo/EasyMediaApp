@@ -1,0 +1,33 @@
+<section class="login-container">
+
+  <div class="img-container">
+    <!-- <img class="img-fluid" src="" alt="login-image"> -->
+    <img class="login-image img-fluid" src="../../../assets/images/login_image.png" alt="login-image">
+  </div>
+
+  <h1>Easy Media</h1>
+  <span>Now, share is easy</span>
+  <h2>Sign In</h2>
+
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control login-inputs" placeholder="example@email.com" formControlName="email">
+
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control login-inputs" placeholder="Password" formControlName="password">
+    </div>
+    <div class="row">
+      <div class="col error-message">
+        <p *ngIf="errorMessage">* {{ errorMessage }}</p>
+        <p *ngIf="invalidField('email')">* Email is required and must be valid</p>
+      </div>
+    </div>
+    <div class="btn-container d-flex align-items-end flex-column">
+      <button type="submit" class="btn-sign-in">SIGN IN</button>
+      <span>Don’t have an account? <a [routerLink]="['/register']">Sign up here</a></span>
+    </div>
+  </form>
+</section>

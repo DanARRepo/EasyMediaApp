@@ -1,0 +1,20 @@
+.posts-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .post-results {
+    display: flex;
+    flex-direction: column;
+    span {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333333B2;
+    }
+  }
+}

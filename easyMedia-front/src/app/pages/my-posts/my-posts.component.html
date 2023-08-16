@@ -1,0 +1,17 @@
+<section class="posts-container">
+    <h1>My Publications</h1>
+    <form class="post-form">
+        <app-date-input (clearValues)="clear($event)" (dateValue)="searchTerms($event.value)"></app-date-input>
+    </form>
+
+    <div class="post-results" *ngIf="myPosts.length === 0">
+        <img src="../../../assets/images/icon _smileys.png" alt="no results image">
+        <span>Nothing to see here</span>
+    </div>
+
+    <div class="p-4">
+        <ng-container *ngFor="let post of myPosts" >
+            <app-card class="m-3" [cardInfo]="post"></app-card>
+        </ng-container>
+    </div>
+</section>

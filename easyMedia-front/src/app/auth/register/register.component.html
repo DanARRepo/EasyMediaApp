@@ -1,0 +1,33 @@
+<section class="register-container">
+    <div class="img-container">
+        <img class="register-image img-fluid" src="../../../assets/images/login_image.png" alt="login-image">
+    </div>
+
+    <h1>Easy Media</h1>
+    <span>Now, share is easy</span>
+    <h2>Sign Up</h2>
+
+    <form class="register-form" [formGroup]="registerForm" (ngSubmit)="createUser()">
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control register-inputs" placeholder="Full name" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control register-inputs" placeholder="example@email.com"
+                formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control register-inputs" placeholder="Password" formControlName="password">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control register-inputs" placeholder="Password" formControlName="password2">
+        </div>
+        <div class="btn-container d-flex align-items-end flex-column">
+            <button type="submit" class="btn btn-sign-up">SIGN UP</button>
+            <span>Already have an account? <a [routerLink]="['/login']">Login</a></span>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,20 @@
+<section class="posts-container">
+    <h1>All Publications</h1>
+
+    <form class="post-form">
+        <app-text-input [inputTitle]="title" (textValue)="searchTerms($event)"></app-text-input>
+        <app-date-input (clearValues)="clear($event)" (dateValue)="searchTerms($event.value)"></app-date-input>
+    </form>
+
+    <div class="results-container">
+        <span>Showing 2/{{ totalPosts }} Posts</span>
+        <ng-container *ngFor="let post of allPosts">
+            <app-card class="m-3" [cardInfo]="post"></app-card>
+        </ng-container>
+        <div class="d-flex justify-content-center">
+            <button (click)="changePage(-2)" class="btn btn-secondary"><i class="fas fa-chevron-left"></i></button>
+            &nbsp;
+            <button (click)="changePage(2)" class="btn btn-secondary"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>

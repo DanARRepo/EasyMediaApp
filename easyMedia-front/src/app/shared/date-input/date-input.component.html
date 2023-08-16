@@ -1,0 +1,7 @@
+<div class="date-container mb-3">
+    <div>
+        <label class="form-label">Date select</label>
+        <input #date (change)="emitDate(date)" type="date" class="form-control post-inputs" placeholder="Select a date" id="date">
+    </div>
+    <button class="btn" (click)="clearFilter()"><i class="fas fa-times-circle"></i></button>
+</div>
